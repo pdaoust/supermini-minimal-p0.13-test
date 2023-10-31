@@ -1,0 +1,6 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_P013
+    def_bool $(shieldsv_list_contains,p013)
+    select SPI
