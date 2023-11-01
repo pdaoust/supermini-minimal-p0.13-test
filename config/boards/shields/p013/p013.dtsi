@@ -14,9 +14,9 @@
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <1>;
-        rows = <1>;
-        map = < RC(0,0) >;
+        columns = <2>;
+        rows = <2>;
+        map = < RC(0,0) RC(0,1) RC(1,0) RC(1,1) >;
   };
 
     kscan0: kscan {
@@ -27,16 +27,12 @@
 
         row-gpios
             = <&gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+              <&gpio1 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
 
         col-gpios
             = <&gpio0 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+              <&gpio1 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
-    };
-
-    ext-power {
-        compatible = "zmk,ext-power-generic";
-        label = "EXT_POWER";
-        control-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
     };
 };
