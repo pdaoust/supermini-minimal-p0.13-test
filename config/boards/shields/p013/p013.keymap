@@ -13,7 +13,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        bindings = <&kp A &kp B &kp C &ext_power EP_TOG>;
+                        bindings = <&kp A>;
                 };
         };
 };
